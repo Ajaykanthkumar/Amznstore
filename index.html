@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Amzn Store</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script type="module" src="firebase-config.js"></script>
-  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+  <!-- Your Firebase config -->
+  <script src="firebase-config.js"></script>
 </head>
 <body>
   <header>
-    <nav id="nav-menu"></nav>
+    <nav id="nav-menu">
+      <!-- Navigation links will be injected here -->
+    </nav>
   </header>
   <main>
-    <h1>Welcome to Amzn Store</h1>
-    <div id="product-list"></div>
+    <section id="product-list">
+      <!-- Amazon products will be displayed here -->
+    </section>
   </main>
   <footer>
     <p>&copy; 2025 Amzn Store</p>
   </footer>
+  <script src="app.js"></script>
 </body>
 </html>
