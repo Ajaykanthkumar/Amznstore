@@ -2,94 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="AmznStore - Your Ultimate Online Shopping Affiliate Destination. Discover the best deals from Amazon, Flipkart, Myntra & Ajio.">
-  <meta name="keywords" content="AmznStore, Affiliate Store, Online Shopping, Amazon Deals, Fashion, Electronics">
-  <meta name="author" content="AmznStore Team">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - AmznStore</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Discover top trending Amazon products. Buy directly using affiliate links at AmznStore.">
+  <meta name="keywords" content="AmznStore, Amazon Affiliate, Online Shopping, Deals, Best Products">
+  <meta name="author" content="AmznStore">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <title>AmznStore - Home</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png"/>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-  <!-- Structured Data for SEO -->
+  <!-- Structured JSON-LD Metadata -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "AmznStore",
-    "url": "https://www.amznstore.com",
-    "logo": "https://www.amznstore.com/images/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/amznstore",
-      "https://www.instagram.com/amznstore"
-    ],
-    "description": "Affiliate e-commerce platform offering curated deals from Amazon, Flipkart, Myntra, Ajio and more."
-  }
+    {
+      "@context": "https://schema.org/",
+      "@type": "Store",
+      "name": "AmznStore",
+      "url": "https://www.amznstore.com/products",
+      "logo": "https://www.amznstore.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/amznstore",
+        "https://www.instagram.com/amznstore"
+      ]
+    }
   </script>
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader"></div>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo">AmznStore</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="wishlist.html">Wishlist</a></li>
-          <li><a href="orders.html">Orders</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="account.html">Account</a></li>
-        </ul>
-      </nav>
-      <div class="auth-buttons">
-        <a href="account.html" class="btn-login">Sign In</a>
-        <a href="account.html" class="btn-signup">Sign Up</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html">AmznStore</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Wishlist</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Product Section -->
+<section class="container py-5">
+  <div class="row text-center mb-4">
+    <h2 class="fw-bold">Top Trending Products</h2>
+    <p class="text-muted">Click on "Buy Now" to view the full product on Amazon</p>
+  </div>
+
+  <div class="row g-4" id="product-grid">
+    <!-- Product Template -->
+    <!-- REPEAT THIS BLOCK TO ADD MORE PRODUCTS -->
+    <div class="col-md-4">
+      <div class="card product-card h-100 shadow-sm">
+        <img src="https://via.placeholder.com/300x200?text=Product+Image" class="card-img-top" alt="Product Name">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Sample Product Name</h5>
+          <p class="card-text text-muted">Short product description goes here. Update this based on your link.</p>
+          <div class="mt-auto">
+            <a href="https://www.amazon.in/dp/B0XYZ123456?tag=yourtag-21" target="_blank" class="btn btn-primary w-100">Buy Now</a>
+          </div>
+        </div>
       </div>
     </div>
-  </header>
+    <!-- END PRODUCT BLOCK -->
+  </div>
+</section>
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Discover Top Deals from Amazon & More</h1>
-      <p>One place. Unlimited shopping. Instant redirection to trusted platforms.</p>
-      <a href="products.html" class="btn-primary">Shop Now</a>
-    </div>
-  </section>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">&copy; 2025 AmznStore. All Rights Reserved.</p>
+</footer>
 
-  <!-- Search and Filter -->
-  <section class="search-filter">
-    <div class="container">
-      <input type="text" id="searchInput" placeholder="Search for products..." />
-      <select id="categoryFilter">
-        <option value="">All Categories</option>
-        <option value="fashion">Fashion</option>
-        <option value="electronics">Electronics</option>
-        <option value="home">Home & Kitchen</option>
-      </select>
-    </div>
-  </section>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Optional Script -->
+<script src="js/script.js"></script>
 
-  <!-- Featured Products -->
-  <section class="featured-products container">
-    <h2>Featured Products</h2>
-    <div class="product-grid" id="productGrid">
-      <!-- Products will be dynamically inserted from JS -->
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 AmznStore. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
 </body>
-</html><!-- Home Page HTML content will go here -->
+</html>
