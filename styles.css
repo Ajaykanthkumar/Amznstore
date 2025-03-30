@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
+  color: #333;
+}
+header {
+  background-color: #232f3e;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.products {
+  padding: 2rem;
+}
