@@ -1,26 +1,99 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
   color: #333;
+  transition: background 0.5s ease;
 }
+
 header {
   background-color: #232f3e;
   padding: 1rem;
   color: white;
   text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.5s ease-out;
 }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 1rem;
   padding: 0;
+  margin: 0;
 }
+
+nav ul li {
+  position: relative;
+}
+
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
+
+nav ul li a:hover {
+  background-color: #37475a;
+}
+
 .products {
   padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+iframe {
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+iframe:hover {
+  transform: scale(1.01);
+}
+
+button {
+  cursor: pointer;
+  background-color: #ff9900;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #e68a00;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
