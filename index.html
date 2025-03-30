@@ -1,1 +1,95 @@
-<!-- Home Page HTML content will go here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AmznStore - Your Ultimate Online Shopping Affiliate Destination. Discover the best deals from Amazon, Flipkart, Myntra & Ajio.">
+  <meta name="keywords" content="AmznStore, Affiliate Store, Online Shopping, Amazon Deals, Fashion, Electronics">
+  <meta name="author" content="AmznStore Team">
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>AmznStore - Home</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "AmznStore",
+    "url": "https://www.amznstore.com",
+    "logo": "https://www.amznstore.com/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/amznstore",
+      "https://www.instagram.com/amznstore"
+    ],
+    "description": "Affiliate e-commerce platform offering curated deals from Amazon, Flipkart, Myntra, Ajio and more."
+  }
+  </script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">AmznStore</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="account.html" class="btn-login">Sign In</a>
+        <a href="account.html" class="btn-signup">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Discover Top Deals from Amazon & More</h1>
+      <p>One place. Unlimited shopping. Instant redirection to trusted platforms.</p>
+      <a href="products.html" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Search and Filter -->
+  <section class="search-filter">
+    <div class="container">
+      <input type="text" id="searchInput" placeholder="Search for products..." />
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="fashion">Fashion</option>
+        <option value="electronics">Electronics</option>
+        <option value="home">Home & Kitchen</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products container">
+    <h2>Featured Products</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- Products will be dynamically inserted from JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AmznStore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html><!-- Home Page HTML content will go here -->
