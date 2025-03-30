@@ -1,1 +1,18 @@
 <h1>Sign In Page</h1>
+<button onclick="googleSignIn()">Sign in with Google</button>
+
+<script>
+  function googleSignIn() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+      .then(result => {
+        const user = result.user;
+        alert(`Welcome ${user.displayName}`);
+        // redirect or save session
+      })
+      .catch(error => {
+        console.error(error);
+        alert(error.message);
+      });
+  }
+</script>
