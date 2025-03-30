@@ -1,7 +1,25 @@
+// Firebase Auth Observer to track user login state
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log("User is signed in:", user.displayName || user.phoneNumber);
+    localStorage.setItem("loggedIn", "true");
+  } else {
+    console.log("No user is signed in.");
+    localStorage.setItem("loggedIn", "false");
+  }
+  updateAuthMenu(); // Update menu based on state
+});
+
 function signOut() {
-  alert("Signed out!");
-  localStorage.removeItem("loggedIn");
-  updateAuthMenu();
+  firebase.auth().signOut().then(() => {
+    alert("Signed out!");
+    localStorage.setItem("loggedIn", "false");
+    updateAuthMenu();
+    window.location.href = "index.html"; // Optional: Redirect to home
+  }).catch(error => {
+    console.error("Sign-out error:", error);
+    alert("Failed to sign out");
+  });
 }
 
 function updateAuthMenu() {
