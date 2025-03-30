@@ -1,0 +1,1 @@
+// JavaScript for Firebase auth, dynamic UI, and menu toggle
