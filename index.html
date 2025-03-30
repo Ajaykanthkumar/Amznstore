@@ -3,206 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AmznStore - Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Student Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">AmznStore</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <a class="navbar-brand" href="index.html">Student Hub</a>
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <header class="bg-primary text-white text-center py-5">
-    <h1>Welcome to AmznStore</h1>
-    <p>Your one-stop shop for amazing Amazon deals!</p>
-  </header>
-  <section class="container my-5">
-    <div class="mb-4">
-  <input type="text" id="search-input" class="form-control" placeholder="Search for products..." onkeyup="filterProducts()">
-    </div>
-    <div class="row" id="product-list">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="images/sample-product.jpg" class="card-img-top" alt="Product">
-          <div class="card-body">
-            <h5 class="card-title">Sample Product</h5>
-            <p class="card-text">$19.99</p>
-            <a href="https://www.amazon.in/" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" id="product-list">
-  <!-- Product 1 -->
-  <div class="col-md-4">
-    <div class="card">
-      <img src="images/boAt Airdopes 311 Pro.jpg" class="card-img-top" alt="Product 1">
-      <div class="card-body">
-        <h5 class="card-title">Wireless Earbuds</h5>
-        <p class="card-text">$29.99</p>
-        <a href="https://www.amazon.in/your-earbuds-link" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-      </div>
-    </div>
+
+  <!-- Welcome Section -->
+  <div class="container mt-5 text-center">
+    <h1>Welcome to Student Hub</h1>
+    <p>Your one-stop destination for essential student products!</p>
+    <a href="products.html" class="btn btn-primary mt-3">Explore Products</a>
   </div>
 
-  <!-- Product 2 -->
-  <div class="col-md-4">
-    <div class="card">
-      <img src="images/sample-product.jpg" class="card-img-top" alt="Product 2">
-      <div class="card-body">
-        <h5 class="card-title">Smart Watch</h5>
-        <p class="card-text">$49.99</p>
-        <a href="https://www.amazon.in/your-smartwatch-link" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Product 3 -->
-  <div class="col-md-4">
-    <div class="card">
-      <img src="images/sample-product.jpg" class="card-img-top" alt="Product 3">
-      <div class="card-body">
-        <h5 class="card-title">Bluetooth Speaker</h5>
-        <p class="card-text">$39.99</p>
-        <a href="https://www.amazon.in/your-speaker-link" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-      </div>
-    </div>
-  </div>
-</div>
-    <!-- Product 1 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/earbuds.jpg" class="card-img-top" alt="Wireless Earbuds">
-    <div class="card-body">
-      <h5 class="card-title">boAt Airdopes 141</h5>
-      <p class="card-text">₹1,299</p>
-      <a href="https://www.amazon.in/dp/B098FKXT8L" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-
-<!-- Product 2 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/smartwatch.jpg" class="card-img-top" alt="Smart Watch">
-    <div class="card-body">
-      <h5 class="card-title">Noise ColorFit Pulse</h5>
-      <p class="card-text">₹1,499</p>
-      <a href="https://www.amazon.in/dp/B08YK5G6W9" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-
-<!-- Product 3 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/speaker.jpg" class="card-img-top" alt="Bluetooth Speaker">
-    <div class="card-body">
-      <h5 class="card-title">JBL Go 3</h5>
-      <p class="card-text">₹2,999</p>
-      <a href="https://www.amazon.in/dp/B08J4G4F9S" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-
-<!-- Product 4 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/trimmer.jpg" class="card-img-top" alt="Beard Trimmer">
-    <div class="card-body">
-      <h5 class="card-title">Philips Beard Trimmer BT1232</h5>
-      <p class="card-text">₹849</p>
-      <a href="https://www.amazon.in/dp/B07HGBMJT6" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-
-<!-- Product 5 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/powerbank.jpg" class="card-img-top" alt="Power Bank">
-    <div class="card-body">
-      <h5 class="card-title">Mi 10000mAh Power Bank 3i</h5>
-      <p class="card-text">₹1,299</p>
-      <a href="https://www.amazon.in/dp/B0896Y3F2R" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-    <!-- Product 6 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/laptop.jpg" class="card-img-top" alt="Laptop">
-    <div class="card-body">
-      <h5 class="card-title">HP 15s Ryzen 5 Laptop</h5>
-      <p class="card-text">₹42,990</p>
-      <a href="https://www.amazon.in/dp/B09MZSP5XG" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-
-<!-- Product 7 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/backpack.jpg" class="card-img-top" alt="Backpack">
-    <div class="card-body">
-      <h5 class="card-title">Wildcraft 44L Backpack</h5>
-      <p class="card-text">₹1,299</p>
-      <a href="https://www.amazon.in/dp/B07RHY7W9B" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-
-<!-- Product 8 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/waterbottle.jpg" class="card-img-top" alt="Water Bottle">
-    <div class="card-body">
-      <h5 class="card-title">Milton Thermosteel Bottle</h5>
-      <p class="card-text">₹799</p>
-      <a href="https://www.amazon.in/dp/B00IQ5DB3C" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-
-<!-- Product 9 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/router.jpg" class="card-img-top" alt="WiFi Router">
-    <div class="card-body">
-      <h5 class="card-title">TP-Link WiFi Router</h5>
-      <p class="card-text">₹1,099</p>
-      <a href="https://www.amazon.in/dp/B08DJ7BX9K" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-
-<!-- Product 10 -->
-<div class="col-md-4">
-  <div class="card">
-    <img src="images/lamp.jpg" class="card-img-top" alt="Desk Lamp">
-    <div class="card-body">
-      <h5 class="card-title">Wipro LED Desk Lamp</h5>
-      <p class="card-text">₹649</p>
-      <a href="https://www.amazon.in/dp/B07K7Y38LH" target="_blank" class="btn btn-warning">Buy on Amazon</a>
-    </div>
-  </div>
-</div>
-  </section>
-  <footer class="bg-dark text-white text-center py-3">
-    <p>© 2025 AmznStore | All rights reserved.</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
