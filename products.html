@@ -1,1 +1,68 @@
-<!-- Products Listing Page HTML content will go here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse top deals and trending products on AmznStore. Shop across categories and find Amazon affiliate products easily." />
+  <meta name="keywords" content="AmznStore products, online deals, affiliate items, Amazon offers" />
+  <meta name="author" content="AmznStore Team" />
+
+  <title>Products | AmznStore</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">AmznStore</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="search-filter">
+    <input type="text" id="searchInput" placeholder="Search products..." />
+    <div class="filter-options">
+      <select id="priceFilter">
+        <option value="">Price</option>
+        <option value="0-500">Under ₹500</option>
+        <option value="500-1000">₹500 - ₹1000</option>
+        <option value="1000-5000">₹1000 - ₹5000</option>
+        <option value="5000-10000">₹5000 - ₹10000</option>
+        <option value="10000+">₹10000+</option>
+      </select>
+      <select id="categoryFilter">
+        <option value="">Category</option>
+        <option value="fashion">Fashion</option>
+        <option value="electronics">Electronics</option>
+        <option value="home">Home</option>
+        <option value="books">Books</option>
+        <option value="beauty">Beauty</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="product-grid" id="productGrid">
+    <!-- Example Product Card -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x300" alt="Product Image" />
+      <h2 class="product-title">Stylish Wireless Headphones</h2>
+      <p class="product-price">₹2,499</p>
+      <a class="buy-btn" href="https://www.amazon.in/dp/B0999YXXXX?tag=yourtag" target="_blank">Buy Now</a>
+    </div>
+
+    <!-- You can paste or load more product cards here -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AmznStore. All rights reserved.</p>
+  </footer>
+</body>
+</html><!-- Products Listing Page HTML content will go here -->
