@@ -1,1 +1,58 @@
-<!-- Single Product Page HTML content will go here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="View product details and buy from AmznStore - powered by Amazon affiliate links." />
+  <meta name="keywords" content="product, buy now, affiliate, AmznStore" />
+  <meta name="author" content="AmznStore Team" />
+
+  <title>Product Details | AmznStore</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">AmznStore</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-detail-page">
+    <div class="product-container">
+      <div class="product-image-skeleton skeleton"></div>
+      <img src="https://via.placeholder.com/400x400" alt="Product Image" class="product-image" onload="this.previousElementSibling.style.display='none'; this.style.display='block';" />
+
+      <div class="product-info">
+        <h1 class="product-title">Product Title Placeholder</h1>
+        <p class="product-description">
+          This product is imported from Amazon. It includes high-quality material and great reviews. Description pulled via affiliate.
+        </p>
+
+        <div class="product-meta">
+          <p class="product-price">₹2,499 <span class="product-discount">₹3,999</span></p>
+          <p class="product-category">Category: Electronics</p>
+          <p class="product-rating">Rating: ★★★★☆</p>
+        </div>
+
+        <a href="https://www.amazon.in/dp/B09G9D8KRQ?tag=yourtag-21" class="btn-buy-now" target="_blank" rel="noopener noreferrer">
+          Buy on Amazon
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AmznStore. All rights reserved.</p>
+  </footer>
+</body>
+</html><!-- Single Product Page HTML content will go here -->
