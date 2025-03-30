@@ -2,57 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="View product details and buy from AmznStore - powered by Amazon affiliate links." />
-  <meta name="keywords" content="product, buy now, affiliate, AmznStore" />
-  <meta name="author" content="AmznStore Team" />
-
-  <title>Product Details | AmznStore</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AmznStore - Products</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="logo">AmznStore</div>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="AmznStore Logo"/>
+      <h1>AmznStore</h1>
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="wishlist.html">Wishlist</a></li>
-        <li><a href="orders.html">Orders</a></li>
-        <li><a href="account.html">Account</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="account.html">Account</a>
+      <a href="orders.html">Orders</a>
+      <a href="wishlist.html">Wishlist</a>
     </nav>
   </header>
 
-  <main class="product-detail-page">
-    <div class="product-container">
-      <div class="product-image-skeleton skeleton"></div>
-      <img src="https://via.placeholder.com/400x400" alt="Product Image" class="product-image" onload="this.previousElementSibling.style.display='none'; this.style.display='block';" />
+  <!-- Banner Section -->
+  <section class="banner">
+    <h2>Welcome to AmznStore</h2>
+    <p>Your ultimate affiliate marketplace</p>
+  </section>
 
-      <div class="product-info">
-        <h1 class="product-title">Product Title Placeholder</h1>
-        <p class="product-description">
-          This product is imported from Amazon. It includes high-quality material and great reviews. Description pulled via affiliate.
-        </p>
+  <!-- Search and Filter -->
+  <section class="search-filter">
+    <input type="text" id="searchBox" placeholder="Search for products..." />
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="fashion">Fashion</option>
+      <option value="electronics">Electronics</option>
+      <option value="home">Home</option>
+    </select>
+    <select id="priceFilter">
+      <option value="">All Prices</option>
+      <option value="0-500">Under ₹500</option>
+      <option value="500-1000">₹500 - ₹1000</option>
+      <option value="1000+">Above ₹1000</option>
+    </select>
+  </section>
 
-        <div class="product-meta">
-          <p class="product-price">₹2,499 <span class="product-discount">₹3,999</span></p>
-          <p class="product-category">Category: Electronics</p>
-          <p class="product-rating">Rating: ★★★★☆</p>
-        </div>
-
-        <a href="https://www.amazon.in/dp/B09G9D8KRQ?tag=yourtag-21" class="btn-buy-now" target="_blank" rel="noopener noreferrer">
-          Buy on Amazon
-        </a>
-      </div>
+  <!-- Product List Section -->
+  <section class="products-container" id="productList">
+    <!-- Example Product Card - You Can Duplicate and Replace Links -->
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OQL._SX679_.jpg" alt="Product Image" />
+      <h3>Noise ColorFit Icon 2 Smartwatch</h3>
+      <p class="price">₹1,499</p>
+      <p>1.8'' Display, Bluetooth Calling, Smart Features</p>
+      <a href="https://www.amazon.in/dp/B0B4V5Q8XC" class="buy-btn" target="_blank">Buy Now</a>
     </div>
-  </main>
+
+    <!-- Add More Product Cards Below -->
+    <!-- Paste Amazon link in href, and update title, img src, price, description manually or dynamically -->
+  </section>
 
   <footer>
-    <p>&copy; 2025 AmznStore. All rights reserved.</p>
+    <p>© 2025 AmznStore | Powered by Affiliate Links</p>
   </footer>
 </body>
-</html><!-- Single Product Page HTML content will go here -->
+</html>
