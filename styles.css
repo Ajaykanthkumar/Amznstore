@@ -1,210 +1,51 @@
-/* Fonts and Resets */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-* {
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
-
-body {
-  background: linear-gradient(to right, #eef2f3, #8e9eab);
-  color: #333;
-  overflow-x: hidden;
-}
-
-/* Header */
-header {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-header h1 {
-  font-size: 2.8rem;
-  font-weight: 600;
-}
-
-nav {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px 18px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background: #ff9900;
-  color: #fff;
-}
-
-/* Banner */
-.banner {
-  background: linear-gradient(to right, #ff9966, #ff5e62);
-  color: white;
-  text-align: center;
-  padding: 70px 20px;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-.banner h2 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.banner p {
-  font-size: 1.2rem;
-  color: #fdfdfd;
-}
-
-/* Search */
-.search-bar {
-  margin: 30px auto;
-  text-align: center;
-}
-
-.search-bar input {
-  width: 90%;
-  max-width: 500px;
-  padding: 12px 20px;
-  border: 2px solid #888;
-  border-radius: 30px;
-  font-size: 1rem;
-  transition: 0.3s ease;
-}
-
-.search-bar input:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-/* Product Grid */
-.products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 40px;
-}
-
-.product-card {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: #333;
   overflow: hidden;
+  margin: 0;
 }
-
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+nav ul li {
+  float: left;
 }
-
-.product-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.product-details {
-  padding: 20px;
-  text-align: left;
-}
-
-.product-details h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.product-details p {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.product-details .price {
-  color: #e53935;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-top: 10px;
-}
-
-.product-details .buy-btn {
-  margin-top: 15px;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  background-color: #ff9900;
+nav ul li a {
+  display: block;
   color: white;
-  padding: 12px;
-  border-radius: 10px;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
 }
-
-.product-details .buy-btn:hover {
-  background-color: #f57c00;
+nav ul li a:hover {
+  background-color: #111;
 }
-
-/* Footer */
-footer {
-  background-color: #2c3e50;
-  color: white;
-  padding: 30px;
+header {
   text-align: center;
-  margin-top: 50px;
+  padding: 50px;
+  color: white;
 }
-
-/* Skeleton Loader */
-.skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e4e4e4 50%, #f0f0f0 75%);
-  background-size: 400% 100%;
-  animation: loading 1.5s infinite;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.skeleton-img {
-  height: 250px;
-  width: 100%;
-}
-
-.skeleton-text {
-  height: 20px;
+.product {
+  background-color: white;
   margin: 15px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
-
-@keyframes loading {
-  0% { background-position: 100% 0; }
-  100% { background-position: -100% 0; }
+.product:hover {
+  transform: scale(1.05);
 }
-
-/* Fade animation */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .banner h2 {
-    font-size: 2rem;
-  }
-
-  .product-image {
-    height: 200px;
-  }
+.product img {
+  max-width: 100%;
+  border-radius: 10px;
 }
